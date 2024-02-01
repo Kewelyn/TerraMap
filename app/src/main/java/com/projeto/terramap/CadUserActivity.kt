@@ -2,6 +2,7 @@ package com.projeto.terramap
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -33,6 +34,11 @@ class CadUserActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
+    override fun onStart() {
+        super.onStart()
+        val textView = findViewById<TextView>(R.id.textView)
+        textView.text = "Bem-vindo à tela de cadastro de usuário!"
+    }
         private fun IrparaTelaLogin() {
             val LoginActivity = Intent(this, LoginActivity::class.java)
             startActivity(LoginActivity)

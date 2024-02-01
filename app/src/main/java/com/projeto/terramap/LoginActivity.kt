@@ -23,6 +23,13 @@ class LoginActivity : AppCompatActivity() {
 
         //setSupportActionBar(binding.toolbar)
 
+        binding.buttonEntrar.setOnClickListener {
+
+            val email = binding.editTextTextEmailAddress2.text.toString()
+            val password = binding.editTextTextPassword.text.toString()
+            IrparaTelaInicial()
+        }
+
         binding.buttonCadastrar.setOnClickListener {
             IrparaTelaCadUsuario()
         }
@@ -36,10 +43,16 @@ class LoginActivity : AppCompatActivity() {
             //    .setAction("Action", null).show()
         //}
     }
-        private fun IrparaTelaCadUsuario() {
-            val cadUserActivity = Intent(this, CadUserActivity::class.java)
-            startActivity(cadUserActivity)
-        }
+
+    private fun IrparaTelaInicial() {
+        val homeActivity = Intent(this, homeActivity::class.java)
+        startActivity(homeActivity)
+    }
+
+    private fun IrparaTelaCadUsuario() {
+        val cadUserActivity = Intent(this, CadUserActivity::class.java)
+        startActivity(cadUserActivity)
+    }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_login)
