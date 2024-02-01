@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".LoginActivity">
@@ -48,7 +47,6 @@
         android:layout_marginLeft="22mm"
         android:layout_marginTop="550dp"
         android:backgroundTint="#1A3000"
-        android:onClick="Cadastre"
         android:text="Cadastre-se" />
 
     <EditText
