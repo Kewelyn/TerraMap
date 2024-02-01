@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <!--<com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true">
@@ -18,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>-->
 
     <!--<include layout="@layout/content_login" />-->
 
@@ -37,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="25mm"
         android:layout_marginTop="500dp"
-        android:backgroundTint="#8BC34A"
+        android:backgroundTint="#1B3201"
         android:text="Entrar" />
 
     <Button
@@ -46,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="22mm"
         android:layout_marginTop="550dp"
-        android:backgroundTint="#8BC34A"
+        android:backgroundTint="#1A3000"
         android:onClick="Cadastre"
         android:text="Cadastre-se" />
 
@@ -54,40 +55,45 @@
         android:id="@+id/editTextTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
         android:layout_gravity="center"
-        android:minHeight="70dp"
-        android:hint="Password"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FBFAFA"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="70dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
         android:layout_gravity="center"
-        android:minHeight="70dp"
-        android:hint="E-mail"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
         android:layout_marginTop="-80dp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:background="#232323"
+        android:backgroundTint="#FAF7F7"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:minHeight="70dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="135dp"
         android:gravity="center"
         android:paddingTop="1in"
         android:text="Login"
-        android:layout_marginLeft="135dp"
+        android:textColor="#121212"
         android:textSize="8mm"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
