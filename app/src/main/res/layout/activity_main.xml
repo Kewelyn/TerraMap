@@ -38,8 +38,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="25mm"
         android:layout_marginTop="600dp"
-        android:text="Next"
-        android:onClick="Next" />
+        android:backgroundTint="#66B10F"
+        android:onClick="Next"
+        android:text="Next" />
 
     <TextView
         android:id="@+id/textView"
@@ -60,6 +61,8 @@
         android:gravity="center"
         android:paddingTop="-100dp"
         android:text="TerraMap"
-        android:textSize="30sp" />
+        android:textColor="#72D500"
+        android:textSize="50sp"
+        android:textStyle="bold" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
