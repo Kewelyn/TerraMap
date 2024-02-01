@@ -1,5 +1,6 @@
 package com.projeto.terramap
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +23,10 @@ class LoginActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
+        binding.buttonCadastrar.setOnClickListener {
+            IrparaTelaCadUsuario()
+        }
+
         val navController = findNavController(R.id.nav_host_fragment_content_login)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -31,6 +36,10 @@ class LoginActivity : AppCompatActivity() {
             //    .setAction("Action", null).show()
         //}
     }
+        private fun IrparaTelaCadUsuario() {
+            val cadUserActivity = Intent(this, CadUserActivity::class.java)
+            startActivity(cadUserActivity)
+        }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_login)

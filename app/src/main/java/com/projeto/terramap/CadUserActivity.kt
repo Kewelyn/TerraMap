@@ -1,5 +1,6 @@
 package com.projeto.terramap
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -22,15 +23,21 @@ class CadUserActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
+        // Move the setOnClickListener after inflating the layout
+        binding.btCadLogin.setOnClickListener {
+            IrparaTelaLogin()
+        }
+
         val navController = findNavController(R.id.nav_host_fragment_content_cad_user)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
-
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
     }
+
+        private fun IrparaTelaLogin() {
+            val LoginActivity = Intent(this, LoginActivity::class.java)
+            startActivity(LoginActivity)
+        }
+
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_cad_user)

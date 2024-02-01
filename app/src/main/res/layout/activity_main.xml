@@ -33,19 +33,19 @@
         app:srcCompat="@android:drawable/ic_dialog_email" />-->
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/next_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25mm"
         android:layout_marginTop="600dp"
-        android:text="Next" />
+        android:text="Next"
+        android:onClick="Next" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="313dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
-        android:FontWeight="bold"
         android:layout_gravity="center"
         android:paddingTop="70dp"
         android:text="Sejam bem vindos!"
@@ -54,10 +54,10 @@
     <TextView
         android:id="@+id/textView1"
         android:layout_width="313dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="-200dp"
+        android:layout_height="103dp"
         android:layout_gravity="center"
+        android:layout_marginTop="-200dp"
+        android:gravity="center"
         android:paddingTop="-100dp"
         android:text="TerraMap"
         android:textSize="30sp" />
