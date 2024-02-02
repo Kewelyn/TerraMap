@@ -1,6 +1,8 @@
 package com.projeto.terramap
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 //import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 //import androidx.navigation.findNavController
@@ -30,6 +32,23 @@ class homeActivity : AppCompatActivity() {
         //    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
         //        .setAction("Action", null).show()
         //}
+    }
+
+    fun buttonCadProp(view: View) {
+        IrparaTelaCadPropriedades()
+    }
+    private fun IrparaTelaCadPropriedades() {
+        val PropedadesActivity = Intent(this, CadPropriedadeActivity::class.java)
+        startActivity(PropedadesActivity)
+    }
+
+    fun buttonLogout(view: View) {
+        IrparaTelaLogin()
+    }
+
+    private fun IrparaTelaLogin() {
+        val loginIntent = Intent(this, LoginActivity::class.java)
+        startActivity(loginIntent)
     }
 
     //override fun onSupportNavigateUp(): Boolean {
