@@ -44,13 +44,14 @@
         android:onClick="buttonLogout"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/VisualizarUser"
         android:layout_width="286dp"
         android:layout_height="81dp"
         android:layout_gravity="center"
         android:layout_marginTop="53mm"
         android:backgroundTint="#002202"
         android:gravity="center"
+        android:onClick="VisualizarUser"
         android:text="Visualizar Usuários"
         android:textSize="24sp" />
 

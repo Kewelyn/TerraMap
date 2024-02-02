@@ -34,6 +34,15 @@ class homeActivity : AppCompatActivity() {
         //}
     }
 
+    fun VisualizarUser(view: View) {
+        IrparaTelaVisUsuario()
+    }
+
+    private fun IrparaTelaVisUsuario() {
+        val VisualizarUserActivity = Intent(this, FirstFragment::class.java)
+        startActivity(VisualizarUserActivity)
+    }
+
     fun buttonCadProp(view: View) {
         IrparaTelaCadPropriedades()
     }
