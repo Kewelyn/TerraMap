@@ -32,22 +32,24 @@
         app:srcCompat="@android:drawable/ic_dialog_email" />-->
 
     <Button
-        android:id="@+id/button_entrar"
+        android:id="@+id/buttonEntrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25mm"
         android:layout_marginTop="500dp"
         android:backgroundTint="#1B3201"
+        android:onClick="Entrar"
         android:text="Entrar" />
 
     <Button
-        android:id="@+id/button_cadastrar"
+        android:id="@+id/buttonCadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="22mm"
         android:layout_marginTop="550dp"
         android:backgroundTint="#1A3000"
-        android:text="Cadastre-se" />
+        android:text="Cadastre-se"
+        android:onClick="CadUsuario"/>
 
     <EditText
         android:id="@+id/editTextTextPassword"

@@ -7,21 +7,21 @@
     android:fitsSystemWindows="true"
     tools:context=".CadUserActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <!--<com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true">-->
 
-        <com.google.android.material.appbar.MaterialToolbar
+        <!--<com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize" />-->
 
-    </com.google.android.material.appbar.AppBarLayout>
+    <!--</com.google.android.material.appbar.AppBarLayout>-->
 
-    <!--<include layout="@layout/content_cad_user" />
+    <!--<include layout="@layout/content_cad_user" />-->
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,12 +32,13 @@
 
     <Button
         android:id="@+id/bt_cad_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cadastrar"
-        android:maxHeight="50dp"
+        android:layout_width="208dp"
+        android:layout_height="68dp"
+        android:layout_gravity="center"
         android:layout_marginTop="3in"
-        android:layout_gravity="center"/>
+        android:backgroundTint="#8BC34A"
+        android:maxHeight="50dp"
+        android:text="Cadastrar" />
 
     <EditText
         android:id="@+id/editTextTextPassword"

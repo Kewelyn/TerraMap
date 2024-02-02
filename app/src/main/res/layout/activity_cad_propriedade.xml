@@ -8,28 +8,29 @@
     android:orientation="vertical"
     tools:context=".CadPropriedadeActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <!--<com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true">-->
 
-        <com.google.android.material.appbar.MaterialToolbar
+        <!--<com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize" />-->
 
-    </com.google.android.material.appbar.AppBarLayout>
+    <!--</com.google.android.material.appbar.AppBarLayout>-->
 
     <Button
         android:id="@+id/bt_cad_login"
-        android:layout_width="wrap_content"
+        android:layout_width="236dp"
         android:layout_height="wrap_content"
-        android:text="Cadastrar"
-        android:maxHeight="50dp"
+        android:layout_gravity="center"
         android:layout_marginTop="3in"
-        android:layout_gravity="center"/>
+        android:backgroundTint="#8BC34A"
+        android:maxHeight="50dp"
+        android:text="Cadastrar" />
 
-    <!--<EditText
+    <EditText
         android:id="@+id/editText9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,7 +41,7 @@
         android:minHeight="70dp"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="290dp" />
 
     <EditText
         android:id="@+id/editText3"
@@ -53,7 +54,7 @@
         android:minHeight="70dp"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="150dp" />
 
     <EditText
         android:id="@+id/editText4"
@@ -79,7 +80,7 @@
         android:minHeight="70dp"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="-120dp" />
 
     <EditText
         android:id="@+id/editTextText6"
@@ -92,7 +93,7 @@
         android:minHeight="70dp"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
-        android:layout_marginTop="16dp" />-->
+        android:layout_marginTop="-250dp" />
 
     <TextView
         android:id="@+id/textView"

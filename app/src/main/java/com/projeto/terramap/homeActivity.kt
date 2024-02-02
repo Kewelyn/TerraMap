@@ -1,12 +1,12 @@
 package com.projeto.terramap
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
+//import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
+//import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
+//import androidx.navigation.ui.navigateUp
+//import androidx.navigation.ui.setupActionBarWithNavController
 import com.projeto.terramap.databinding.ActivityHomeBinding
 
 class homeActivity : AppCompatActivity() {
@@ -28,13 +28,13 @@ class homeActivity : AppCompatActivity() {
 
         //binding.fab.setOnClickListener { view ->
         //    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-       //         .setAction("Action", null).show()
+        //        .setAction("Action", null).show()
         //}
     }
 
     //override fun onSupportNavigateUp(): Boolean {
-       // val navController = findNavController(R.id.nav_host_fragment_content_home)
+        //val navController = findNavController(R.id.nav_host_fragment_content_home)
         //return navController.navigateUp(appBarConfiguration)
-             //   || super.onSupportNavigateUp()
-  //  }
+           //     || super.onSupportNavigateUp()
+    //}
 }

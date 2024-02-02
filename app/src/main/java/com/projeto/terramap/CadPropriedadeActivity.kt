@@ -20,7 +20,7 @@ class CadPropriedadeActivity : AppCompatActivity() {
         binding = ActivityCadPropriedadeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
+        //setSupportActionBar(binding.toolbar)
 
         val navController = findNavController(R.id.nav_host_fragment_content_cad_propriedade)
         appBarConfiguration = AppBarConfiguration(navController.graph)
