@@ -32,47 +32,47 @@
 
     <Button
         android:id="@+id/bt_cad_login"
-        android:layout_width="208dp"
-        android:layout_height="68dp"
+        android:layout_width="303dp"
+        android:layout_height="58dp"
         android:layout_gravity="center"
-        android:layout_marginTop="3in"
+        android:layout_marginTop="4in"
         android:backgroundTint="#8BC34A"
         android:maxHeight="50dp"
         android:text="Cadastrar" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
         android:layout_gravity="center"
-        android:minHeight="70dp"
+        android:layout_marginTop="65mm"
+        android:ems="10"
         android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="70dp"
         android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:layout_marginTop="190dp"/>
+        android:paddingEnd="8dp" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="wrap_content"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
         android:layout_gravity="center"
-        android:minHeight="70dp"
-        android:hint="E-mail"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="43mm"
         android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:minHeight="70dp"
         android:paddingStart="8dp"
-        android:paddingEnd="8dp"/>
+        android:paddingEnd="8dp" />
 
     <EditText
         android:id="@+id/editTextText6"
-        android:layout_width="wrap_content"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="-30dp"
+        android:layout_marginTop="18mm"
         android:ems="10"
         android:hint="Nome"
         android:inputType="text"
@@ -88,7 +88,30 @@
         android:textStyle="bold"
         android:gravity="center"
         android:paddingTop="20dp"
+        android:layout_marginTop="29dp"
         android:text="Cadastrar Usuário"
-        android:textSize="26sp" />
+        android:textSize="37sp" />
+
+    <ImageView
+        android:id="@+id/fotoUser"
+        android:layout_width="178dp"
+        android:layout_height="235dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-57mm"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_second"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/buttonFoto"
+        android:layout_width="317dp"
+        android:layout_height="58dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-3mm"
+        android:text="Adicionar foto"
+        android:backgroundTint="#8BC34A"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
