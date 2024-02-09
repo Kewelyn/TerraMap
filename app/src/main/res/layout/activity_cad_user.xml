@@ -7,31 +7,8 @@
     android:fitsSystemWindows="true"
     tools:context=".CadUserActivity">
 
-    <!--<com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">-->
-
-        <!--<com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />-->
-
-    <!--</com.google.android.material.appbar.AppBarLayout>-->
-
-    <!--<include layout="@layout/content_cad_user" />-->
-
-    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />-->
-
     <Button
-        android:id="@+id/bt_cad_login"
+        android:id="@+id/btnCadUser"
         android:layout_width="303dp"
         android:layout_height="58dp"
         android:layout_gravity="center"
@@ -94,8 +71,8 @@
 
     <ImageView
         android:id="@+id/fotoUser"
-        android:layout_width="178dp"
-        android:layout_height="235dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
         android:layout_gravity="center"
         android:layout_marginTop="-57mm"
         app:layout_constraintBottom_toTopOf="@+id/buttonFoto"
@@ -111,7 +88,7 @@
         android:layout_height="58dp"
         android:layout_gravity="center"
         android:layout_marginTop="-3mm"
-        android:text="Adicionar foto"
+        android:text="@string/Acesso_camera"
         android:backgroundTint="#8BC34A"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
