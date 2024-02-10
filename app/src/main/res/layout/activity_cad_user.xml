@@ -19,7 +19,7 @@
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="315dp"
+        android:layout_width="354dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="65mm"
@@ -32,7 +32,7 @@
 
     <EditText
         android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="315dp"
+        android:layout_width="354dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="43mm"
@@ -46,7 +46,7 @@
 
     <EditText
         android:id="@+id/editTextText6"
-        android:layout_width="315dp"
+        android:layout_width="354dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="18mm"

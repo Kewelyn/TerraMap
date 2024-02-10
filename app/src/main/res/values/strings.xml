@@ -15,5 +15,6 @@
 
     <string name="channelName">Your Channel Name</string>
     <string name="channel_description">Your Channel Description</string>
+    <string name="title_activity_localizacao">localizacaoActivity</string>
 
 </resources>

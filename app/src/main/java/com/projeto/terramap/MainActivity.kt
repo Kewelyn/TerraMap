@@ -36,14 +36,14 @@ class MainActivity : AppCompatActivity() {
         val builder = NotificationCompat.Builder(this, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_launcher_foreground)
             .setContentTitle("Seja bem vindo")
-            .setContentText("Venha conhecer nossos serviços! Temos o objetivo otimizar tarefas e fornecer uma interface" +
-                    "intuitiva para que o usuário possa realizar a manipulação de dados com facilidade, a fim de contribuir" +
-                    "com todos os pesquisadores da área e proporcionar eficiência ao utilizá-lo")
+            .setContentText("Temos o objetivo de otimizar tarefas e fornecer uma interface" +
+                    " intuitiva, para que o usuário possa realizar o manuseio de dados com facilidade, a fim de contribuir" +
+                    " com todos os pesquisadores da área e proporcionar eficiência ao utilizá-lo.")
             .setStyle(
                 NotificationCompat.BigTextStyle()
-                    .bigText("Venha conhecer nossos serviços! Temos o objetivo otimizar tarefas e fornecer uma interface" +
-                            "intuitiva para que o usuário possa realizar a manipulação de dados com facilidade, a fim de contribuir" +
-                            "com todos os pesquisadores da área e proporcionar eficiência ao utilizá-lo")
+                    .bigText("Temos o objetivo de otimizar tarefas e fornecer uma interface" +
+                            " intuitiva, para que o usuário possa realizar o manuseio de dados com facilidade, a fim de contribuir" +
+                            " com todos os pesquisadores da área e proporcionar eficiência ao utilizá-lo.")
             )
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 

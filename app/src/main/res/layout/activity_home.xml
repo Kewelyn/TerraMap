@@ -76,6 +76,17 @@
         android:textSize="24sp"
         android:onClick="buttonCadProp"/>
 
+    <Button
+        android:id="@+id/buttonlocation"
+        android:layout_width="284dp"
+        android:layout_height="81dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-45mm"
+        android:backgroundTint="#002202"
+        android:text="Localizações"
+        android:textSize="24sp"
+        android:onClick="buttonlocation"/>
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"

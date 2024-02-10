@@ -43,6 +43,14 @@ class homeActivity : AppCompatActivity() {
         startActivity(VisualizarUserActivity)
     }
 
+    fun buttonlocation(view: View) {
+        IrparaTelaLocalizacao()
+    }
+    private fun IrparaTelaLocalizacao() {
+        val LocalizacaoActivity = Intent(this, localizacaoActivity::class.java)
+        startActivity(LocalizacaoActivity)
+    }
+
     fun buttonCadProp(view: View) {
         IrparaTelaCadPropriedades()
     }
