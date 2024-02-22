@@ -3,6 +3,7 @@ package com.projeto.terramap
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.util.Log
 //import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 //import androidx.navigation.findNavController
@@ -21,17 +22,6 @@ class homeActivity : AppCompatActivity() {
 
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        //setSupportActionBar(binding.toolbar)
-
-        //val navController = findNavController(R.id.nav_host_fragment_content_home)
-        //appBarConfiguration = AppBarConfiguration(navController.graph)
-        //setupActionBarWithNavController(navController, appBarConfiguration)
-
-        //binding.fab.setOnClickListener { view ->
-        //    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-        //        .setAction("Action", null).show()
-        //}
     }
 
     fun VisualizarUser(view: View) {
@@ -43,13 +33,15 @@ class homeActivity : AppCompatActivity() {
         startActivity(VisualizarUserActivity)
     }
 
-    fun buttonlocation(view: View) {
-        IrparaTelaLocalizacao()
-    }
-    private fun IrparaTelaLocalizacao() {
-        val LocalizacaoActivity = Intent(this, localizacaoActivity::class.java)
-        startActivity(LocalizacaoActivity)
-    }
+    //fun buttonlocation(view: View) {
+    //    Log.d("HomeActivity", "Botão de Localização clicado")
+    //    IrparaTelaLocalizacao()
+    //}
+    //private fun IrparaTelaLocalizacao() {
+    //    Log.d("HomeActivity", "Ir para Tela de Localizacao")
+    //    val LocalizacaoActivity = Intent(this, localizacaoActivity::class.java)
+    //    startActivity(LocalizacaoActivity)
+    //}
 
     fun buttonCadProp(view: View) {
         IrparaTelaCadPropriedades()
@@ -67,10 +59,4 @@ class homeActivity : AppCompatActivity() {
         val loginIntent = Intent(this, LoginActivity::class.java)
         startActivity(loginIntent)
     }
-
-    //override fun onSupportNavigateUp(): Boolean {
-        //val navController = findNavController(R.id.nav_host_fragment_content_home)
-        //return navController.navigateUp(appBarConfiguration)
-           //     || super.onSupportNavigateUp()
-    //}
 }
