@@ -16,5 +16,12 @@
     <string name="channelName">Your Channel Name</string>
     <string name="channel_description">Your Channel Description</string>
     <string name="title_activity_localizacao">localizacaoActivity</string>
+    <string name="login_fragment">Hello fragment</string>
+    <string name="caduser_fragment">blank fragment</string>
+    <string name="title_activity_visualizar_propriedade">VisualizarPropriedadeActivity</string>
+    <string name="title_activity_login_cad_user">LoginCadUserActivity</string>
+    <string name="title_activity_vis_dados">VisDadosActivity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_vis_prop">VisPropActivity</string>
 
 </resources>

@@ -11,6 +11,8 @@ import androidx.navigation.ui.AppBarConfiguration
 //import androidx.navigation.ui.navigateUp
 //import androidx.navigation.ui.setupActionBarWithNavController
 import com.projeto.terramap.databinding.ActivityHomeBinding
+import com.projeto.terramap.homeActivity
+
 
 class homeActivity : AppCompatActivity() {
 
@@ -24,24 +26,6 @@ class homeActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
-    fun VisualizarUser(view: View) {
-        IrparaTelaVisUsuario()
-    }
-
-    private fun IrparaTelaVisUsuario() {
-        val VisualizarUserActivity = Intent(this, FirstFragment::class.java)
-        startActivity(VisualizarUserActivity)
-    }
-
-    //fun buttonlocation(view: View) {
-    //    Log.d("HomeActivity", "Botão de Localização clicado")
-    //    IrparaTelaLocalizacao()
-    //}
-    //private fun IrparaTelaLocalizacao() {
-    //    Log.d("HomeActivity", "Ir para Tela de Localizacao")
-    //    val LocalizacaoActivity = Intent(this, localizacaoActivity::class.java)
-    //    startActivity(LocalizacaoActivity)
-    //}
 
     fun buttonCadProp(view: View) {
         IrparaTelaCadPropriedades()
