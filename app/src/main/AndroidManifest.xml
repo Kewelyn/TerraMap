@@ -27,26 +27,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TerraMap"
         tools:targetApi="31" >
-        <activity
-            android:name=".VisPropActivity"
-            android:exported="false"
-            android:label="@string/title_activity_vis_prop"
-            android:theme="@style/Theme.TerraMap" />
-        <activity
-            android:name=".VisDadosActivity"
-            android:exported="false"
-            android:label="@string/title_activity_vis_dados"
-            android:theme="@style/Theme.TerraMap" />
-        <activity
-            android:name=".VisualizardadosActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login_cad_user"
-            android:theme="@style/Theme.TerraMap" />
-        <activity
-            android:name=".VisualizarPropriedadeActivity"
-            android:exported="false"
-            android:label="@string/title_activity_visualizar_propriedade"
-            android:theme="@style/Theme.TerraMap" />
         <!--
         <activity
             android:name=".localizacaoActivity"
