@@ -41,9 +41,15 @@ class LoginActivity : AppCompatActivity() {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    IrparaTelaInicial()
+                    val user = auth.currentUser
+                    if (user != null) {
+                        IrparaTelaInicial()
+                    } else {
+                        Toast.makeText(this, "Usuário não autenticado.", Toast.LENGTH_SHORT).show()
+                    }
                 } else {
-                    Toast.makeText(this, "Falha no login. Verifique suas credenciais.", Toast.LENGTH_SHORT).show()
+                    val errorMessage = task.exception?.message ?: "Erro desconhecido"
+                    Toast.makeText(this, "Falha no login: $errorMessage", Toast.LENGTH_SHORT).show()
                 }
             }
     }
@@ -68,9 +74,4 @@ class LoginActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    //override fun onSupportNavigateUp(): Boolean {
-    //    val navController = findNavController(R.id.nav_host_fragment_content_login)
-   //     return navController.navigateUp(appBarConfiguration)
-    //            || super.onSupportNavigateUp()
-    //}
 }
