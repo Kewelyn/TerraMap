@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import android.view.View
+import android.widget.Button
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -17,6 +19,8 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var emailEditText: EditText
+    private lateinit var passwordEditText: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,44 +28,26 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        emailEditText = findViewById(R.id.editTextTextEmailAddress2)
+        passwordEditText = findViewById(R.id.editTextTextPassword)
+
         auth = FirebaseAuth.getInstance()
-
-        // setSupportActionBar(binding.toolbar)
-
-        //binding.buttonEntrar.setOnClickListener {
-
-        //    val email = binding.editTextTextEmailAddress2.text.toString()
-        //    val password = binding.editTextTextPassword.text.toString()
-        //    IrparaTelaInicial()
-        //}
-
-        //binding.buttonCadastrar.setOnClickListener {
-        //    IrparaTelaCadUsuario()
-        //}
     }
-    //fun loginUser(view: View) {
-        //val email = binding.editTextTextEmailAddress2.text.toString()
-        //val password = binding.editTextTextPassword.text.toString()
-
-        //auth.signInWithEmailAndPassword(email, password)
-        //    .addOnCompleteListener(this) { task ->
-       //         if (task.isSuccessful) {
-       //             // Sign in successful
-     //               IrparaTelaInicial()
-       //         } else {
-                    // Sign in failed
-        //            Toast.makeText(baseContext, "Falha no login", Toast.LENGTH_SHORT).show()
-        //        }
-    //        }
-    //}
-
-    //fun Entrar(view: View) {
-    //    loginUser(view)
-    //}
 
     fun Entrar(view: View) {
-        IrparaTelaInicial()
+        val email = emailEditText.text.toString()
+        val password = passwordEditText.text.toString()
+
+        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    IrparaTelaInicial()
+                } else {
+                    Toast.makeText(this, "Falha no login. Verifique suas credenciais.", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
+
 
     private fun IrparaTelaInicial() {
         val homeActivity = Intent(this, homeActivity::class.java)
