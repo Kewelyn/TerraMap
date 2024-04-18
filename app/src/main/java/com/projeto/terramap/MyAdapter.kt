@@ -33,9 +33,9 @@ class MyAdapter(private val userList : ArrayList<Usuario>) : RecyclerView.Adapte
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
 
-        val nome: TextView = itemView.findViewById(R.id.editTextText6)
-        val email: TextView = itemView.findViewById(R.id.editTextTextEmailAddress2)
-        val password: TextView = itemView.findViewById(R.id.editTextTextPassword)
+        val nome: TextView = itemView.findViewById(R.id.tvfirstName)
+        val email: TextView = itemView.findViewById(R.id.tvlastName)
+        val password: TextView = itemView.findViewById(R.id.tvage)
 
     }
 
