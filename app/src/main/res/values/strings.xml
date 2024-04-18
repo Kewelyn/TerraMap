@@ -25,5 +25,6 @@
     <string name="title_activity_vis_prop">VisPropActivity</string>
     <string name="title_activity_userlist">UserlistActivity</string>
     <string name="title_activity_my_adapter">MyAdapter</string>
+    <string name="title_activity_update">UpdateActivity</string>
 
 </resources>
