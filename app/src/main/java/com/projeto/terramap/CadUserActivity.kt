@@ -21,7 +21,6 @@ import com.google.firebase.database.FirebaseDatabase
 import android.graphics.drawable.BitmapDrawable
 import java.io.ByteArrayOutputStream
 
-
 class CadUserActivity : AppCompatActivity() {
     private val REQUEST_CAMERA_PERMISSION = 101
     private val REQUEST_IMAGE_CAPTURE = 100

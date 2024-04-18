@@ -33,12 +33,12 @@ class UserlistActivity : AppCompatActivity() {
         userRecyclerview.layoutManager = LinearLayoutManager(this)
         userRecyclerview.setHasFixedSize(true)
 
-        userArrayList = arrayListOf<Usuario>()
+        userArrayList = arrayListOf()
         getUserData()
     }
 
     private fun getUserData() {
-        database = FirebaseDatabase.getInstance().getReference("Usuario")
+        database = FirebaseDatabase.getInstance().getReference("usuarios")
         database.addValueEventListener(object : ValueEventListener{
 
             override fun onDataChange(snapshot: DataSnapshot) {
