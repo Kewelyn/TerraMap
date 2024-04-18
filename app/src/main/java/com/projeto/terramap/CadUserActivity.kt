@@ -108,10 +108,11 @@ class CadUserActivity : AppCompatActivity() {
     }
 
     data class Usuario(
-        val id: String,
-        val nome: String,
-        val email: String,
-        val password: String,
-        val foto: String?
+        val id: String = "",
+        val nome: String = "",
+        val email: String = "",
+        val password: String = "",
+        val foto: String? = null
     )
+
 }
