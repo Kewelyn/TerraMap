@@ -1,0 +1,60 @@
+package com.projeto.terramap
+import com.projeto.terramap.CadUserActivity.Usuario
+
+import android.os.Bundle
+import com.google.android.material.snackbar.Snackbar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
+import com.projeto.terramap.databinding.ActivityUserlistBinding
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.*
+
+class UserlistActivity : AppCompatActivity() {
+
+    private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var binding: ActivityUserlistBinding
+    private lateinit var dbref : DatabaseReference
+    private lateinit var userRecyclerview : RecyclerView
+    private lateinit var userArrayList : ArrayList<Usuario>
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        binding = ActivityUserlistBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_userlist)
+
+        userRecyclerview = findViewById(R.id.userList)
+        userRecyclerview.layoutManager = LinearLayoutManager(this)
+        userRecyclerview.setHasFixedSize(true)
+
+        userArrayList = arrayListOf<Usuario>()
+        getUserData()
+    }
+
+    private fun getUserData() {
+        dbref = FirebaseDatabase.getInstance().getReference("Usuario")
+        dbref.addValueEventListener(object : ValueEventListener{
+
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()){
+                    for (userSnapshot in snapshot.children){
+                        val user = userSnapshot.getValue(Usuario::class.java)
+                        userArrayList.add(user!!)
+                    }
+                    userRecyclerview.adapter = MyAdapter(userArrayList)
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+
+        })
+
+    }
+}

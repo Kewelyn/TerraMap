@@ -43,4 +43,13 @@ class homeActivity : AppCompatActivity() {
         val loginIntent = Intent(this, LoginActivity::class.java)
         startActivity(loginIntent)
     }
+
+    fun VisualizarUser(view: View) {
+        VisualizarUsuários()
+    }
+
+    private fun VisualizarUsuários() {
+        val VisualizarUsuáriosIntent = Intent(this, UserlistActivity::class.java)
+        startActivity(VisualizarUsuáriosIntent)
+    }
 }
