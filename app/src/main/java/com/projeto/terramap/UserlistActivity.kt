@@ -11,13 +11,15 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.projeto.terramap.databinding.ActivityUserlistBinding
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.*
 
 class UserlistActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityUserlistBinding
-    private lateinit var dbref : DatabaseReference
+    private lateinit var database : DatabaseReference
     private lateinit var userRecyclerview : RecyclerView
     private lateinit var userArrayList : ArrayList<Usuario>
 
@@ -36,8 +38,8 @@ class UserlistActivity : AppCompatActivity() {
     }
 
     private fun getUserData() {
-        dbref = FirebaseDatabase.getInstance().getReference("Usuario")
-        dbref.addValueEventListener(object : ValueEventListener{
+        database = FirebaseDatabase.getInstance().getReference("Usuario")
+        database.addValueEventListener(object : ValueEventListener{
 
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()){
@@ -52,9 +54,6 @@ class UserlistActivity : AppCompatActivity() {
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
-
-
         })
-
     }
 }
