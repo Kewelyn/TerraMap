@@ -1,5 +1,6 @@
 package com.projeto.terramap
 import com.projeto.terramap.CadUserActivity.Usuario
+import com.projeto.terramap.MyAdapter.OnDeleteClickListener
 
 import android.os.Bundle
 import android.widget.Toast
@@ -14,7 +15,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.*
 
-class UserlistActivity : AppCompatActivity() {
+class UserlistActivity : AppCompatActivity(), OnDeleteClickListener {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityUserlistBinding
@@ -28,9 +29,9 @@ class UserlistActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityUserlistBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_userlist)
+        setContentView(binding.root)
 
-        userRecyclerview = findViewById(R.id.userList)
+        userRecyclerview = binding.userList
         userRecyclerview.layoutManager = LinearLayoutManager(this)
         userRecyclerview.setHasFixedSize(true)
 
@@ -38,25 +39,32 @@ class UserlistActivity : AppCompatActivity() {
         getUserData()
 
         val usuarioId = "-NvhtJ8pxf6b-3WFoEBHval"
-        updateBtn = findViewById(R.id.updateBtn)
 
-        deleteBtn = findViewById(R.id.deleteBtn)
+        //deleteBtn = binding.deleteBtn
+        //updateBtn = binding.updateBtn
 
-        deleteBtn.setOnClickListener {
-            val builder: AlertDialog.Builder = AlertDialog.Builder(this)
-            //val builder = AlertDialog.Builder(this)
-            builder.setTitle("Deletar dados")
-            builder.setMessage("Voce tem certeza?")
-            builder.setCancelable(false)
-            builder.setPositiveButton("Sim") {_, _ ->
-                // Assuming usuariosId is defined somewhere
-                database.child("usuarios").child(usuarioId).removeValue()
-                Toast.makeText(this, "Deletado", Toast.LENGTH_SHORT).show()
-            }
-            builder.setNegativeButton("Não") {_, _ ->}
-            val alertDialog = builder.create()
-            alertDialog.show()
+        val adapter = MyAdapter(userArrayList)
+        adapter.setOnDeleteClickListener(this) // Passa a própria atividade como o ouvinte de clique
+        userRecyclerview.adapter = adapter
+    }
+
+    override fun onDeleteClick(position: Int) {
+        val usuarioId = userArrayList[position].id  // Ajuste isso para acessar corretamente o ID do usuário
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+        builder.setTitle("Deletar dados")
+        builder.setMessage("Você tem certeza?")
+        builder.setCancelable(false)
+        builder.setPositiveButton("Sim") { _, _ ->
+            // Remove o item da lista
+            userArrayList.removeAt(position)
+            userRecyclerview.adapter?.notifyItemRemoved(position)
+            // Aqui você pode implementar a lógica para excluir o item do banco de dados
+            // Lembre-se de usar o ID do usuário para excluir o registro correspondente
+            Toast.makeText(this, "Deletado", Toast.LENGTH_SHORT).show()
         }
+        builder.setNegativeButton("Não") { _, _ -> }
+        val alertDialog = builder.create()
+        alertDialog.show()
     }
 
     private fun getUserData() {
