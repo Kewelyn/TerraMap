@@ -15,29 +15,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/user_item"/>
-
-    <Button
-        android:id="@+id/updateBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#276E2A"
-        android:text="Atualizar"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:visibility="gone"/>
-
-    <Button
-        android:id="@+id/deleteBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Delete"
-        android:layout_marginLeft="38sp"
-        android:backgroundTint="#206522"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        />
+        tools:listitem="@layout/activity_user_item"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

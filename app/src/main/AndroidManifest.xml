@@ -28,6 +28,11 @@
         android:theme="@style/Theme.TerraMap"
         tools:targetApi="31">
         <activity
+            android:name=".UserItem"
+            android:exported="false"
+            android:label="@string/title_activity_user_item"
+            android:theme="@style/Theme.TerraMap" />
+        <activity
             android:name=".PropriedadeListActivity"
             android:exported="false"
             android:label="@string/title_activity_propriedade_list"
