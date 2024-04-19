@@ -26,5 +26,6 @@
     <string name="title_activity_userlist">UserlistActivity</string>
     <string name="title_activity_my_adapter">MyAdapter</string>
     <string name="title_activity_update">UpdateActivity</string>
+    <string name="title_activity_propriedade_list">PropriedadeListActivity</string>
 
 </resources>
