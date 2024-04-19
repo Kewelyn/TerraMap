@@ -95,15 +95,21 @@ class CadUserActivity : AppCompatActivity() {
 
         // Obtenha a imagem do imageView
         val fotoImageView = findViewById<ImageView>(R.id.fotoUser)
-        val fotoBitmap = (fotoImageView.drawable as BitmapDrawable).bitmap
-        val encodedImage = encodeImage(fotoBitmap)
+        val fotoDrawable = fotoImageView.drawable
 
-        // Criar um ID único para a propriedade
-        val usuarioId = database.push().key
+        if (fotoDrawable != null && fotoDrawable is BitmapDrawable) {
+            val fotoBitmap = fotoDrawable.bitmap
+            val encodedImage = encodeImage(fotoBitmap)
 
-        if (usuarioId != null) {
-            val usuario = Usuario(usuarioId, nome, email, password, encodedImage)
-            database.child(usuarioId).setValue(usuario)
+            // Criar um ID único para a propriedade
+            val usuarioId = database.push().key
+
+            if (usuarioId != null) {
+                val usuario = Usuario(usuarioId, nome, email, password, encodedImage)
+                database.child(usuarioId).setValue(usuario)
+            }
+        } else {
+            Toast.makeText(this, "Selecione uma imagem", Toast.LENGTH_SHORT).show()
         }
     }
 
