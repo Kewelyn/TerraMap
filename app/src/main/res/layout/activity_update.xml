@@ -39,7 +39,7 @@
             android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginTop="36dp"
-            android:hint="UserName"
+            android:hint="Nome"
             android:paddingLeft="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +52,7 @@
             android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginTop="32dp"
-            android:hint="First Name"
+            android:hint="Email"
             android:paddingLeft="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -65,25 +65,13 @@
             android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginTop="32dp"
-            android:hint="Last Name"
+            android:hint="Senha"
             android:paddingLeft="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
         <!--android:background="@drawable/input"-->
-
-        <EditText
-            android:id="@+id/age"
-            android:layout_width="360dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="32dp"
-            android:hint="Age"
-            android:paddingLeft="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lastname" />
-
         <!--android:background="@drawable/input"-->
 
         <Button

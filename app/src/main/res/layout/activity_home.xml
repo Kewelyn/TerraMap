@@ -42,6 +42,7 @@
         android:text="Visualizar propriedades"
         android:textSize="24sp" />
 
+
     <Button
         android:id="@+id/buttonCadProp"
         android:layout_width="284dp"
@@ -49,10 +50,20 @@
         android:layout_gravity="center"
         android:layout_marginTop="-14mm"
         android:backgroundTint="#002202"
+        android:onClick="buttonCadProp"
         android:text="Cadastrar Propriedades"
-        android:textSize="24sp"
-        android:onClick="buttonCadProp"/>
+        android:textSize="24sp" />
 
+    <Button
+        android:id="@+id/butAlterardados"
+        android:layout_width="284dp"
+        android:layout_height="81dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-40mm"
+        android:backgroundTint="#002202"
+        android:onClick="butalterardados"
+        android:text="Alterar meus dados"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -63,4 +74,5 @@
         android:textSize="5mm"
         android:layout_gravity="center"
         android:layout_marginTop="-80mm"/>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

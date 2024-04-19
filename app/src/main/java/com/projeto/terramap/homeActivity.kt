@@ -52,4 +52,13 @@ class homeActivity : AppCompatActivity() {
         val VisualizarUsuáriosIntent = Intent(this, UserlistActivity::class.java)
         startActivity(VisualizarUsuáriosIntent)
     }
+
+    fun butalterardados(view: View) {
+        AlterarMeusDados()
+    }
+
+    private fun AlterarMeusDados() {
+        val AlterarUser = Intent(this, UpdateActivity::class.java)
+        startActivity(AlterarUser)
+    }
 }
