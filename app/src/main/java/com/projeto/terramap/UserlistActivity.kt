@@ -2,12 +2,11 @@ package com.projeto.terramap
 import com.projeto.terramap.CadUserActivity.Usuario
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
+import android.widget.Toast
+import android.widget.Button
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.projeto.terramap.databinding.ActivityUserlistBinding
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,6 +21,8 @@ class UserlistActivity : AppCompatActivity() {
     private lateinit var database : DatabaseReference
     private lateinit var userRecyclerview : RecyclerView
     private lateinit var userArrayList : ArrayList<Usuario>
+    private lateinit var deleteBtn: Button
+    private lateinit var updateBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +36,27 @@ class UserlistActivity : AppCompatActivity() {
 
         userArrayList = arrayListOf()
         getUserData()
+
+        val usuarioId = "-NvhtJ8pxf6b-3WFoEBHval"
+        updateBtn = findViewById(R.id.updateBtn)
+
+        deleteBtn = findViewById(R.id.deleteBtn)
+
+        deleteBtn.setOnClickListener {
+            val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+            //val builder = AlertDialog.Builder(this)
+            builder.setTitle("Deletar dados")
+            builder.setMessage("Voce tem certeza?")
+            builder.setCancelable(false)
+            builder.setPositiveButton("Sim") {_, _ ->
+                // Assuming usuariosId is defined somewhere
+                database.child("usuarios").child(usuarioId).removeValue()
+                Toast.makeText(this, "Deletado", Toast.LENGTH_SHORT).show()
+            }
+            builder.setNegativeButton("Não") {_, _ ->}
+            val alertDialog = builder.create()
+            alertDialog.show()
+        }
     }
 
     private fun getUserData() {

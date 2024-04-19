@@ -5,7 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
+
 
 class MyAdapter(private val userList : ArrayList<Usuario>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -19,8 +22,7 @@ class MyAdapter(private val userList : ArrayList<Usuario>) : RecyclerView.Adapte
 
         holder.nome.text = currentItem.nome
         holder.email.text = currentItem.email
-        holder.password.text = currentItem.password
-    }
+        Picasso.get().load(currentItem.foto).into(holder.foto)    }
 
     override fun getItemCount(): Int {
         return userList.size
@@ -29,7 +31,6 @@ class MyAdapter(private val userList : ArrayList<Usuario>) : RecyclerView.Adapte
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         val nome: TextView = itemView.findViewById(R.id.tvfirstName)
         val email: TextView = itemView.findViewById(R.id.tvlastName)
-        val password: TextView = itemView.findViewById(R.id.tvage)
-
+        val foto: ImageView = itemView.findViewById(R.id.imagem_foto)
     }
 }
