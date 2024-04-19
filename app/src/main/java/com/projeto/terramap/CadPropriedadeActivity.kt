@@ -62,12 +62,12 @@ class CadPropriedadeActivity : AppCompatActivity() {
     }
 
     data class Propriedade(
-        val id: String? = "",
-        val tamanhoHa: String? = "",
-        val satelite: String? = "",
-        val car: String? = "",
-        val cultura: String? = "",
-        val municipio: String? = null
+        val id: String = "",
+        val tamanhoHa: String = "",
+        val satelite: String = "",
+        val car: String = "",
+        val cultura: String = "",
+        val municipio: String = "",
     )
 
 }

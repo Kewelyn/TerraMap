@@ -53,6 +53,8 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation ("com.google.firebase:firebase-auth:21.0.1")
     implementation ("com.squareup.picasso:picasso:2.71828")
+    implementation ("com.firebaseui:firebase-ui-database:8.0.0")
+
 
     //implementation("androidx.core:core-ktx:2.2.0")
 }
