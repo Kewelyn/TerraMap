@@ -85,7 +85,7 @@
         android:orientation="horizontal"
         android:layout_marginStart="16dp">
 
-        <Button
+        <!--<Button
             android:id="@+id/updateBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -106,7 +106,7 @@
             android:text="Deletar"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold" />-->
 
     </LinearLayout>
 
