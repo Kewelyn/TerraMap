@@ -18,8 +18,8 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import android.graphics.drawable.BitmapDrawable
 import java.io.ByteArrayOutputStream
+import android.graphics.drawable.BitmapDrawable
 
 class CadUserActivity : AppCompatActivity() {
     private val REQUEST_CAMERA_PERMISSION = 101
@@ -76,16 +76,8 @@ class CadUserActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             val imageBitmap = data?.extras?.get("data") as Bitmap
-            val encodedImage = encodeImage(imageBitmap)
             imageView.setImageBitmap(imageBitmap)
         }
-    }
-
-    private fun encodeImage(bitmap: Bitmap): String {
-        val baos = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
-        val byteArrayImage = baos.toByteArray()
-        return Base64.encodeToString(byteArrayImage, Base64.DEFAULT)
     }
 
     private fun cadastrarUsuario() {
@@ -93,7 +85,6 @@ class CadUserActivity : AppCompatActivity() {
         val email: String = findViewById<EditText>(R.id.editTextTextEmailAddress2).text.toString()
         val password: String = findViewById<EditText>(R.id.editTextTextPassword).text.toString()
 
-        // Obtenha a imagem do imageView
         val fotoImageView = findViewById<ImageView>(R.id.fotoUser)
         val fotoDrawable = fotoImageView.drawable
 
@@ -101,7 +92,6 @@ class CadUserActivity : AppCompatActivity() {
             val fotoBitmap = fotoDrawable.bitmap
             val encodedImage = encodeImage(fotoBitmap)
 
-            // Criar um ID único para a propriedade
             val usuarioId = database.push().key
 
             if (usuarioId != null) {
@@ -113,6 +103,13 @@ class CadUserActivity : AppCompatActivity() {
         }
     }
 
+    private fun encodeImage(bitmap: Bitmap): String {
+        val baos = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+        val byteArrayImage = baos.toByteArray()
+        return Base64.encodeToString(byteArrayImage, Base64.DEFAULT)
+    }
+
     data class Usuario(
         val id: String = "",
         val nome: String = "",
@@ -120,5 +117,4 @@ class CadUserActivity : AppCompatActivity() {
         val password: String = "",
         val foto: String? = null
     )
-
 }
