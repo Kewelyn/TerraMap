@@ -34,29 +34,10 @@ class UserlistActivity : AppCompatActivity() {
         userRecyclerview.layoutManager = LinearLayoutManager(this)
         userRecyclerview.setHasFixedSize(true)
 
+
+
         userArrayList = arrayListOf()
         getUserData()
-
-        //val usuarioId = "-NvhtJ8pxf6b-3WFoEBHval"
-        //updateBtn = findViewById(R.id.updateBtn)
-
-        //deleteBtn = findViewById(R.id.deleteBtn)
-
-        //deleteBtn.setOnClickListener {
-        //    val builder: AlertDialog.Builder = AlertDialog.Builder(this)
-        //    //val builder = AlertDialog.Builder(this)
-        //    builder.setTitle("Deletar dados")
-        //    builder.setMessage("Voce tem certeza?")
-        //builder.setCancelable(false)
-        //    builder.setPositiveButton("Sim") {_, _ ->
-                // Assuming usuariosId is defined somewhere
-        //        database.child("usuarios").child(usuarioId).removeValue()
-        //        Toast.makeText(this, "Deletado", Toast.LENGTH_SHORT).show()
-        //    }
-        //    builder.setNegativeButton("Não") {_, _ ->}
-        //    val alertDialog = builder.create()
-        //    alertDialog.show()
-        //}
     }
 
     private fun getUserData() {

@@ -22,8 +22,6 @@ class UserItem : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityUserItemBinding
     private lateinit var database : DatabaseReference
-    private lateinit var userRecyclerview : RecyclerView
-    private lateinit var userArrayList : ArrayList<CadUserActivity.Usuario>
     private lateinit var deleteBtn: Button
     private lateinit var updateBtn: Button
 
@@ -38,6 +36,9 @@ class UserItem : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         val usuarioId = "-NvhtJ8pxf6b-3WFoEBHval"
+        deleteBtn = binding.deleteBtn
+        updateBtn = binding.updateBtn
+
         updateBtn = findViewById(R.id.updateBtn)
 
         deleteBtn = findViewById(R.id.deleteBtn)
