@@ -35,7 +35,6 @@ class DeleteActivity : AppCompatActivity() {
             }
         }
 
-        setSupportActionBar(binding.toolbar)
     }
 
     private fun deleteData(car: String) {
