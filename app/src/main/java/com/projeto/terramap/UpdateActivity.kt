@@ -29,14 +29,14 @@ class UpdateActivity : AppCompatActivity() {
     }
     private fun updateData(tamanhoHa: String, satelite: String, car: String, cultura: String, municipio: String) {
         database = FirebaseDatabase.getInstance().getReference("propriedades")
-        val propriedade = mapOf<String,String>(
+        val propriedade = mapOf<String, String>(
             "tamanhoHa" to tamanhoHa,
             "satelite" to satelite,
             "car" to car,
             "cultura" to cultura,
             "municipio" to municipio
         )
-        database.child(car).updateChildren(propriedade).addOnSuccessListener {
+        database.child(car).setValue(propriedade).addOnSuccessListener {
             binding.updatetamanhoHa.text.clear()
             binding.updatesatelite.text.clear()
             binding.updatecar.text.clear()
@@ -45,5 +45,7 @@ class UpdateActivity : AppCompatActivity() {
             Toast.makeText(this,"Successfully Updated",Toast.LENGTH_SHORT).show()
         }.addOnFailureListener{
             Toast.makeText(this,"Failed to Update",Toast.LENGTH_SHORT).show()
-        }}
+        }
+    }
+
 }
