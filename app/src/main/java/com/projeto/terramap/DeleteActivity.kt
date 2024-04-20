@@ -20,9 +20,8 @@ class DeleteActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-     binding = ActivityDeleteBinding.inflate(layoutInflater)
-     setContentView(binding.root)
+        binding = ActivityDeleteBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         database = FirebaseDatabase.getInstance().reference.child("propriedades")
 
@@ -38,16 +37,18 @@ class DeleteActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
     }
 
-    private fun deleteData(car: String) {
-        // Remove the property from the Firebase Database
-        database.child(car).removeValue()
-            .addOnSuccessListener {
-                // Clear the input field upon successful deletion
-                binding.DeletarPropriedade.text?.clear()
-                Toast.makeText(this, "Propriedade excluída com sucesso!", Toast.LENGTH_SHORT).show()
-            }
-            .addOnFailureListener {
-                Toast.makeText(this, "Erro ao excluir a propriedade!", Toast.LENGTH_SHORT).show()
-            }
+    private fun deleteData(car: String){
+        database.child(car).removeValue().addOnSuccessListener {
+            binding.DeletarPropriedade.text?.clear()
+            Toast.makeText(this, "Propriedade excluída com sucesso!", Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener {
+            Toast.makeText(this, "Erro ao excluir a propriedade!", Toast.LENGTH_SHORT).show()
+        }
     }
+
+    //override fun onSupportNavigateUp(): Boolean {
+    //val navController = findNavController(R.id.nav_host_fragment_content_delete)
+    //return navController.navigateUp(appBarConfiguration)
+    //        || super.onSupportNavigateUp()
+    //}
 }
