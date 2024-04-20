@@ -2,11 +2,9 @@ package com.projeto.terramap
 import com.projeto.terramap.CadPropriedadeActivity.Propriedade
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.projeto.terramap.databinding.ActivityDeleteBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -43,14 +41,12 @@ class DeleteActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 binding.DeletarPropriedade.text?.clear()
                 Toast.makeText(this, "Propriedade excluída com sucesso!", Toast.LENGTH_SHORT).show()
+                Log.d("DeleteActivity", "Property deleted successfully")
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Erro ao excluir a propriedade!", Toast.LENGTH_SHORT).show()
+                Log.e("DeleteActivity", "Error deleting property: $it")
             }
     }
-    //override fun onSupportNavigateUp(): Boolean {
-    //val navController = findNavController(R.id.nav_host_fragment_content_delete)
-    //return navController.navigateUp(appBarConfiguration)
-    //        || super.onSupportNavigateUp()
-    //}
+
 }
