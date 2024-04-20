@@ -13,7 +13,7 @@
         android:layout_width="288dp"
         android:layout_height="76dp"
         android:layout_gravity="center"
-        android:layout_marginTop="80mm"
+        android:layout_marginTop="90mm"
         android:backgroundTint="#002202"
         android:gravity="center"
         android:text="Sair"
@@ -25,7 +25,7 @@
         android:layout_width="286dp"
         android:layout_height="81dp"
         android:layout_gravity="center"
-        android:layout_marginTop="53mm"
+        android:layout_marginTop="40mm"
         android:backgroundTint="#002202"
         android:gravity="center"
         android:onClick="VisualizarUser"
@@ -33,11 +33,23 @@
         android:textSize="24sp" />
 
     <Button
+        android:id="@+id/DeletarPropriedades"
+        android:layout_width="286dp"
+        android:layout_height="81dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="65mm"
+        android:backgroundTint="#002202"
+        android:gravity="center"
+        android:onClick="DeletarPropriedades"
+        android:text="Deletar Propriedades"
+        android:textSize="24sp" />
+
+    <Button
         android:id="@+id/VisualizarPropri"
         android:layout_width="285dp"
         android:layout_height="85dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20mm"
+        android:layout_marginTop="13mm"
         android:backgroundTint="#002202"
         android:onClick="VisualizarPropri"
         android:text="Visualizar propriedades"

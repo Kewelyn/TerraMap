@@ -19,8 +19,6 @@ class UserlistActivity : AppCompatActivity() {
     private lateinit var database : DatabaseReference
     private lateinit var userRecyclerview : RecyclerView
     private lateinit var userArrayList : ArrayList<Usuario>
-    private lateinit var deleteBtn: Button
-    private lateinit var updateBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

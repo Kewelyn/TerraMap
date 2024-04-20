@@ -71,5 +71,14 @@ class homeActivity : AppCompatActivity() {
         startActivity(VisualizarPropriedadesIntent)
     }
 
+    fun DeletarPropriedades(view: View) {
+        DeletarPropriedades()
+    }
+
+    private fun DeletarPropriedades() {
+        val DeletarPropriedadesIntent = Intent(this, DeleteActivity::class.java)
+        startActivity(DeletarPropriedadesIntent)
+    }
+
 }
 
