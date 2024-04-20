@@ -48,16 +48,15 @@ class UserItem : AppCompatActivity() {
         deleteBtn.setOnClickListener {
             Log.d("UserItem", "Botão de deletar clicado")
             val builder: AlertDialog.Builder = AlertDialog.Builder(this)
-            //val builder = AlertDialog.Builder(this)
             builder.setTitle("Deletar dados")
-            builder.setMessage("Voce tem certeza?")
+            builder.setMessage("Você tem certeza?")
             builder.setCancelable(false)
-            builder.setPositiveButton("Sim") {_, _ ->
-        // Assuming usuariosId is defined somewhere
+            builder.setPositiveButton("Sim") { _, _ ->
+                // Assuming usuarioId is defined somewhere
                 database.child("usuarios").child(usuarioId).removeValue()
                 Toast.makeText(this, "Deletado", Toast.LENGTH_SHORT).show()
             }
-            builder.setNegativeButton("Não") {_, _ ->}
+            builder.setNegativeButton("Não") { _, _ -> }
             val alertDialog = builder.create()
             alertDialog.show()
         }
