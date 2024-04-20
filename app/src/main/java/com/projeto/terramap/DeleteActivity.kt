@@ -26,33 +26,28 @@ class DeleteActivity : AppCompatActivity() {
 
         database = FirebaseDatabase.getInstance().reference.child("propriedades")
 
-        binding.deleteBtn.setOnClickListener{
+        binding.deleteBtn.setOnClickListener {
             val car = binding.DeletarPropriedade.text.toString()
-            if (car.isNotEmpty()){
+            if (car.isNotEmpty()) {
                 deleteData(car)
-            }else{
+            } else {
                 Toast.makeText(this, "Digite o número do CAR para excluir uma Propriedade!", Toast.LENGTH_SHORT).show()
             }
         }
 
         setSupportActionBar(binding.toolbar)
-
-        //val navController = findNavController(R.id.nav_host_fragment_content_delete)
-        //appBarConfiguration = AppBarConfiguration(navController.graph)
-        //setupActionBarWithNavController(navController, appBarConfiguration)
-    }
-    private fun deleteData(car: String){
-        database = FirebaseDatabase.getInstance().getReference("Lista de Propriedades")
-        database.child(car).removeValue().addOnSuccessListener {
-            binding.DeletarPropriedade.text?.clear()
-        }.addOnFailureListener {
-            Toast.makeText(this, "Propriedade excluida com sucesso!", Toast.LENGTH_SHORT).show()
-        }
     }
 
-    //override fun onSupportNavigateUp(): Boolean {
-    //val navController = findNavController(R.id.nav_host_fragment_content_delete)
-    //return navController.navigateUp(appBarConfiguration)
-    //        || super.onSupportNavigateUp()
-    //}
+    private fun deleteData(car: String) {
+        // Remove the property from the Firebase Database
+        database.child(car).removeValue()
+            .addOnSuccessListener {
+                // Clear the input field upon successful deletion
+                binding.DeletarPropriedade.text?.clear()
+                Toast.makeText(this, "Propriedade excluída com sucesso!", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Erro ao excluir a propriedade!", Toast.LENGTH_SHORT).show()
+            }
+    }
 }
