@@ -33,9 +33,6 @@ class UserlistActivity : AppCompatActivity() {
         userRecyclerview = findViewById(R.id.userList)
         userRecyclerview.layoutManager = LinearLayoutManager(this)
         userRecyclerview.setHasFixedSize(true)
-
-
-
         userArrayList = arrayListOf()
         getUserData()
     }

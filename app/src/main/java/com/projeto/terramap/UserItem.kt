@@ -2,6 +2,7 @@ package com.projeto.terramap
 import com.projeto.terramap.CadUserActivity.Usuario
 
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -38,12 +39,14 @@ class UserItem : AppCompatActivity() {
         val usuarioId = "-NvhtJ8pxf6b-3WFoEBHval"
         deleteBtn = binding.deleteBtn
         updateBtn = binding.updateBtn
+        database = FirebaseDatabase.getInstance().reference
 
         updateBtn = findViewById(R.id.updateBtn)
 
         deleteBtn = findViewById(R.id.deleteBtn)
 
         deleteBtn.setOnClickListener {
+            Log.d("UserItem", "Botão de deletar clicado")
             val builder: AlertDialog.Builder = AlertDialog.Builder(this)
             //val builder = AlertDialog.Builder(this)
             builder.setTitle("Deletar dados")
