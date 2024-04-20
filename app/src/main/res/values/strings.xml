@@ -28,5 +28,6 @@
     <string name="title_activity_update">UpdateActivity</string>
     <string name="title_activity_propriedade_list">PropriedadeListActivity</string>
     <string name="title_activity_user_item">UserItem</string>
+    <string name="title_activity_delete">DeleteActivity</string>
 
 </resources>
