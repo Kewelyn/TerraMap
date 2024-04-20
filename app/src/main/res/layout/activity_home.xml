@@ -74,7 +74,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="-30mm"
         android:backgroundTint="#002202"
-        android:onClick="butalterardados"
+        android:onClick="butalterarpropri"
         android:text="Atualizar propriedades"
         android:textSize="24sp" />
 
