@@ -53,13 +53,13 @@ class homeActivity : AppCompatActivity() {
         startActivity(VisualizarUsuáriosIntent)
     }
 
-    fun butalterardados(view: View) {
+    fun butalterarpropri(view: View) {
         AlterarMeusDados()
     }
 
     private fun AlterarMeusDados() {
-        val AlterarUser = Intent(this, UpdateActivity::class.java)
-        startActivity(AlterarUser)
+        val AlterarPropri = Intent(this, UpdateActivity::class.java)
+        startActivity(AlterarPropri)
     }
 
     fun VisualizarPropri(view: View) {

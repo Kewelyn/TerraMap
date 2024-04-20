@@ -25,7 +25,7 @@
         android:layout_width="286dp"
         android:layout_height="81dp"
         android:layout_gravity="center"
-        android:layout_marginTop="40mm"
+        android:layout_marginTop="60mm"
         android:backgroundTint="#002202"
         android:gravity="center"
         android:onClick="VisualizarUser"
@@ -37,7 +37,7 @@
         android:layout_width="286dp"
         android:layout_height="81dp"
         android:layout_gravity="center"
-        android:layout_marginTop="65mm"
+        android:layout_marginTop="31mm"
         android:backgroundTint="#002202"
         android:gravity="center"
         android:onClick="DeletarPropriedades"
@@ -49,7 +49,7 @@
         android:layout_width="285dp"
         android:layout_height="85dp"
         android:layout_gravity="center"
-        android:layout_marginTop="13mm"
+        android:layout_marginTop="1mm"
         android:backgroundTint="#002202"
         android:onClick="VisualizarPropri"
         android:text="Visualizar propriedades"
@@ -61,21 +61,21 @@
         android:layout_width="284dp"
         android:layout_height="81dp"
         android:layout_gravity="center"
-        android:layout_marginTop="-14mm"
+        android:layout_marginTop="-60mm"
         android:backgroundTint="#002202"
         android:onClick="buttonCadProp"
         android:text="Cadastrar Propriedades"
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/butAlterardados"
+        android:id="@+id/butalterarpropri"
         android:layout_width="284dp"
         android:layout_height="81dp"
         android:layout_gravity="center"
-        android:layout_marginTop="-40mm"
+        android:layout_marginTop="-30mm"
         android:backgroundTint="#002202"
         android:onClick="butalterardados"
-        android:text="Alterar meus dados"
+        android:text="Atualizar propriedades"
         android:textSize="24sp" />
 
     <TextView
