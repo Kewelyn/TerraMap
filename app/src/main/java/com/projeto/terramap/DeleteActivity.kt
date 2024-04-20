@@ -24,6 +24,8 @@ class DeleteActivity : AppCompatActivity() {
      binding = ActivityDeleteBinding.inflate(layoutInflater)
      setContentView(binding.root)
 
+        database = FirebaseDatabase.getInstance().reference.child("propriedades")
+
         binding.deleteBtn.setOnClickListener{
             val car = binding.DeletarPropriedade.text.toString()
             if (car.isNotEmpty()){
