@@ -33,12 +33,13 @@
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/VisualizarPropri"
         android:layout_width="285dp"
         android:layout_height="85dp"
         android:layout_gravity="center"
         android:layout_marginTop="20mm"
         android:backgroundTint="#002202"
+        android:onClick="VisualizarPropri"
         android:text="Visualizar propriedades"
         android:textSize="24sp" />
 

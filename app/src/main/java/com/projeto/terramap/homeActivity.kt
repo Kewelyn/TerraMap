@@ -61,4 +61,15 @@ class homeActivity : AppCompatActivity() {
         val AlterarUser = Intent(this, UpdateActivity::class.java)
         startActivity(AlterarUser)
     }
+
+    fun VisualizarPropri(view: View) {
+        VisualizarPropriedades()
+    }
+
+    private fun VisualizarPropriedades() {
+        val VisualizarPropriedadesIntent = Intent(this, PropriedadeListActivity::class.java)
+        startActivity(VisualizarPropriedadesIntent)
+    }
+
 }
+

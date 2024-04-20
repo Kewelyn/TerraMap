@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.squareup.picasso.Picasso
 
 
-class MyAdapter(private val userList : ArrayList<Usuario>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+
+class MyAdapter(private val userList: ArrayList<CadUserActivity.Usuario>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.activity_user_item,
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.user_item,
             parent,false)
         return MyViewHolder(itemView)
     }
@@ -22,7 +22,7 @@ class MyAdapter(private val userList : ArrayList<Usuario>) : RecyclerView.Adapte
 
         holder.nome.text = currentItem.nome
         holder.email.text = currentItem.email
-        Picasso.get().load(currentItem.foto).into(holder.foto)    }
+    }
 
     override fun getItemCount(): Int {
         return userList.size
@@ -31,6 +31,6 @@ class MyAdapter(private val userList : ArrayList<Usuario>) : RecyclerView.Adapte
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         val nome: TextView = itemView.findViewById(R.id.tvfirstName)
         val email: TextView = itemView.findViewById(R.id.tvlastName)
-        val foto: ImageView = itemView.findViewById(R.id.imagem_foto)
+
     }
 }

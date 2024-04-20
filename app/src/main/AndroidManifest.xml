@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -27,6 +28,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TerraMap"
         tools:targetApi="31">
+        <activity
+            android:name=".Myadapter2"
+            android:exported="false"
+            android:theme="@style/Theme.TerraMap" />
         <activity
             android:name=".UserItem"
             android:exported="false"

@@ -37,13 +37,13 @@ class UserItem : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         val usuarioId = "-NvhtJ8pxf6b-3WFoEBHval"
-        deleteBtn = binding.deleteBtn
-        updateBtn = binding.updateBtn
+        //deleteBtn = binding.deleteBtn
+        //updateBtn = binding.updateBtn
         database = FirebaseDatabase.getInstance().reference
 
-        updateBtn = findViewById(R.id.updateBtn)
+        //updateBtn = findViewById(R.id.updateBtn)
 
-        deleteBtn = findViewById(R.id.deleteBtn)
+       // deleteBtn = findViewById(R.id.deleteBtn)
 
         deleteBtn.setOnClickListener {
             Log.d("UserItem", "Botão de deletar clicado")
