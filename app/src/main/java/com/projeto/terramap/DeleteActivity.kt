@@ -35,9 +35,9 @@ class DeleteActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-        val navController = findNavController(R.id.nav_host_fragment_content_delete)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        //val navController = findNavController(R.id.nav_host_fragment_content_delete)
+        //appBarConfiguration = AppBarConfiguration(navController.graph)
+        //setupActionBarWithNavController(navController, appBarConfiguration)
     }
     private fun deleteData(car: String){
         database = FirebaseDatabase.getInstance().getReference("Lista de Propriedades")
@@ -48,9 +48,9 @@ class DeleteActivity : AppCompatActivity() {
         }
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-    val navController = findNavController(R.id.nav_host_fragment_content_delete)
-    return navController.navigateUp(appBarConfiguration)
-            || super.onSupportNavigateUp()
-    }
+    //override fun onSupportNavigateUp(): Boolean {
+    //val navController = findNavController(R.id.nav_host_fragment_content_delete)
+    //return navController.navigateUp(appBarConfiguration)
+    //        || super.onSupportNavigateUp()
+    //}
 }
