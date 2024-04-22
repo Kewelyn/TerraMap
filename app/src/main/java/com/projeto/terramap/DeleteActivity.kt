@@ -1,5 +1,4 @@
 package com.projeto.terramap
-import com.projeto.terramap.CadPropriedadeActivity.Propriedade
 
 import android.os.Bundle
 import android.util.Log

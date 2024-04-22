@@ -20,7 +20,6 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import com.google.android.gms.location.LocationServices
-//import com.projeto.terramap.databinding.ActivityLocalizacaoBinding
 import com.projeto.terramap.databinding.ActivityMainBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 
@@ -31,7 +30,6 @@ class MainActivity : AppCompatActivity() {
     private val NOTIFICATION_ID = 0
     private lateinit var notificationManager: NotificationManagerCompat
     private lateinit var binding: ActivityMainBinding
-    //private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,35 +64,29 @@ class MainActivity : AppCompatActivity() {
             notificationManager.notify(NOTIFICATION_ID, builder.build())
         }
 
-        //binding = ActivityLocalizacaoBinding.inflate(layoutInflater)
-        //setContentView(binding.root)
-
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         if (ContextCompat.checkSelfPermission(
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            // Se a permissão ainda não foi concedida, solicitar ao usuário
+
             ActivityCompat.requestPermissions(
                 this,
                 arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
                 MainActivity.REQUEST_LOCATION_PERMISSION
             )
         } else {
-            // Se a permissão foi concedida, obter a localização
             obterLocalizacao()
         }
     }
 
     private fun obterLocalizacao() {
-        // Verificar se a permissão de localização foi concedida
         if (ActivityCompat.checkSelfPermission(
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            // Se a permissão não foi concedida, não podemos obter a localização
             return
         }
 
@@ -125,12 +117,9 @@ class MainActivity : AppCompatActivity() {
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == REQUEST_LOCATION_PERMISSION) {
-            // Verificar se a permissão foi concedida
             if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
-                // Permissão concedida, obter a localização
                 obterLocalizacao()
             } else {
-                // Permissão negada, informar ao usuário
                 Toast.makeText(
                     this,
                     "Permissão de localização negada.",

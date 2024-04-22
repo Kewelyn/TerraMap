@@ -2,7 +2,6 @@ package com.projeto.terramap
 import com.projeto.terramap.CadUserActivity.Usuario
 
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
 import com.projeto.terramap.databinding.ActivityUserlistBinding

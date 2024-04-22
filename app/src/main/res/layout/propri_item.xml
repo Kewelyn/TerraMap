@@ -13,8 +13,6 @@
         android:layout_marginStart="16dp"
         android:orientation="horizontal">
 
-        <!-- Aqui estava a parte da imagem -->
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -112,29 +110,6 @@
         android:backgroundTint="#002202"
         android:orientation="horizontal"
         android:layout_marginStart="16dp">
-
-        <!--<Button
-            android:id="@+id/updateBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="130sp"
-            android:backgroundTint="#276E2A"
-            android:text="Atualizar"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/deleteBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="66dp"
-            android:layout_marginTop="130sp"
-            android:backgroundTint="#206522"
-            android:text="Deletar"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />-->
 
     </LinearLayout>
 

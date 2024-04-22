@@ -1,11 +1,9 @@
 package com.projeto.terramap
-import com.projeto.terramap.CadUserActivity.Usuario
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
 
