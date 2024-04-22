@@ -48,10 +48,10 @@ class DeleteActivity : AppCompatActivity() {
                             if (task.isSuccessful) {
                                 binding.DeletarPropriedade.text?.clear()
                                 Toast.makeText(this@DeleteActivity, "Propriedade excluída com sucesso!", Toast.LENGTH_SHORT).show()
-                                Log.d("DeleteActivity", "Property deleted successfully")
+                                //Log.d("DeleteActivity", "Propriedade deletada com sucesso")
                             } else {
                                 Toast.makeText(this@DeleteActivity, "Erro ao excluir a propriedade!", Toast.LENGTH_SHORT).show()
-                                Log.e("DeleteActivity", "Error deleting property: ${task.exception}")
+                                //Log.e("DeleteActivity", "Erro ao deletar propriedade: ${task.exception}")
                             }
                         }
                     }

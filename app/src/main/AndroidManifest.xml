@@ -39,15 +39,6 @@
             android:label="@string/title_activity_delete"
             android:theme="@style/Theme.TerraMap" />
         <activity
-            android:name=".Myadapter2"
-            android:exported="false"
-            android:theme="@style/Theme.TerraMap" />
-        <activity
-            android:name=".UserItem"
-            android:exported="false"
-            android:label="@string/title_activity_user_item"
-            android:theme="@style/Theme.TerraMap" />
-        <activity
             android:name=".PropriedadeListActivity"
             android:exported="false"
             android:label="@string/title_activity_propriedade_list"
@@ -62,13 +53,6 @@
             android:exported="false"
             android:label="@string/title_activity_userlist"
             android:theme="@style/Theme.TerraMap" />
-        <!--
-        <activity
-            android:name=".localizacaoActivity"
-            android:exported="false"
-            android:label="@string/title_activity_localizacao"
-            android:theme="@style/Theme.TerraMap" />
-        -->
         <activity
             android:name=".homeActivity"
             android:exported="false"

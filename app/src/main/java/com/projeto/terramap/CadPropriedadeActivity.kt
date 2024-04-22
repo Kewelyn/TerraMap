@@ -36,7 +36,6 @@ class CadPropriedadeActivity : AppCompatActivity() {
         val cultura: String = findViewById<EditText>(R.id.editTextText5).text.toString()
         val municipio: String = findViewById<EditText>(R.id.editTextText6).text.toString()
 
-        // Criar um ID único para a propriedade
         val propriedadeId = database.push().key
 
         if (propriedadeId != null) {

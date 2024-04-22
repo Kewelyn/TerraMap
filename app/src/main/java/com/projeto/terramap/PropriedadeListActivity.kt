@@ -41,7 +41,6 @@ class PropriedadeListActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                // Handle onCancelled
             }
         })
     }

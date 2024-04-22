@@ -128,7 +128,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
     companion object {
         private const val REQUEST_LOCATION_PERMISSION = 1
     }
