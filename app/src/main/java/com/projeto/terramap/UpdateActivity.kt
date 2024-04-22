@@ -42,9 +42,9 @@ class UpdateActivity : AppCompatActivity() {
             binding.updatecar.text.clear()
             binding.updatecultura.text.clear()
             binding.updatemunicipio.text.clear()
-            Toast.makeText(this,"Successfully Updated",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Propriedade atualizada com sucesso",Toast.LENGTH_SHORT).show()
         }.addOnFailureListener{
-            Toast.makeText(this,"Failed to Update",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Falha na atualização",Toast.LENGTH_SHORT).show()
         }
     }
 
