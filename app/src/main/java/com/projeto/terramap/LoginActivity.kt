@@ -35,24 +35,23 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun Entrar(view: View) {
-        IrparaTelaInicial()
-        //val email = emailEditText.text.toString()
-        //val password = passwordEditText.text.toString()
+        val email = emailEditText.text.toString()
+        val password = passwordEditText.text.toString()
 
-        //FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
-          //  .addOnCompleteListener { task ->
-            //    if (task.isSuccessful) {
-              //      val user = auth.currentUser
-                //    if (user != null) {
-                  //      IrparaTelaInicial()
-                    //} else {
-                      //  Toast.makeText(this, "Usuário não autenticado.", Toast.LENGTH_SHORT).show()
-                    //}
-                //} else {
-                  //  val errorMessage = task.exception?.message ?: "Erro desconhecido"
-                    //Toast.makeText(this, "Falha no login: $errorMessage", Toast.LENGTH_SHORT).show()
-                //}
-            //}
+        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val user = FirebaseAuth.getInstance().currentUser
+                    if (user != null) {
+                        IrparaTelaInicial()
+                    } else {
+                        Toast.makeText(this, "Usuário não autenticado.", Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    val errorMessage = task.exception?.message ?: "Erro desconhecido"
+                    Toast.makeText(this, "Falha no login: $errorMessage", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 
 
